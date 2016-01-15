@@ -78,7 +78,7 @@
     </p>
   <p class="article-time">
     <time datetime="2016-01-01T07:08:46.000Z" itemprop="datePublished">2016-01-01</time>
-    更新日期:<time datetime="2016-01-15T08:41:56.523Z" itemprop="dateModified">2016-01-15</time>
+    更新日期:<time datetime="2016-01-15T13:10:27.327Z" itemprop="dateModified">2016-01-15</time>
     
   </p>
 </header>
@@ -87,7 +87,7 @@
 		
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
-		<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#u56FE_u6570_u636E_u5E93-Neo4j_u7B80_u4ECB"><span class="toc-number">1.</span> <span class="toc-text">图数据库-Neo4j简介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1_u3001Neo4j_u7684_u4EAE_u70B9"><span class="toc-number">2.</span> <span class="toc-text">1、Neo4j的亮点</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2_u3001_u56FE_u6570_u636E_u5E93_u57FA_u7840_u7B80_u4ECB"><span class="toc-number">3.</span> <span class="toc-text">2、图数据库基础简介</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1__u4EC0_u4E48_u662F_u56FE_u6570_u636E_u5E93"><span class="toc-number">3.0.1.</span> <span class="toc-text">2.1 什么是图数据库</span></a></li></ol></li></ol></li></ol>
+		<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#u56FE_u6570_u636E_u5E93-Neo4j_u7B80_u4ECB"><span class="toc-number">1.</span> <span class="toc-text">图数据库-Neo4j简介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1_u3001Neo4j_u7684_u4EAE_u70B9"><span class="toc-number">2.</span> <span class="toc-text">1、Neo4j的亮点</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2_u3001_u4EC0_u4E48_u662F_u56FE_u6570_u636E_u5E93"><span class="toc-number">3.</span> <span class="toc-text">2、什么是图数据库</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1__u4EC0_u4E48_u662F_u56FE_u6570_u636E_u5E93"><span class="toc-number">3.0.1.</span> <span class="toc-text">2.1 什么是图数据库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2__u5BF9_u6BD4_u5176_u4ED6_u6570_u636E_u5E93_u6A21_u578B"><span class="toc-number">3.0.2.</span> <span class="toc-text">2.2 对比其他数据库模型</span></a></li></ol></li></ol></li></ol>
 		</div>
 		
 		<h1 id="u56FE_u6570_u636E_u5E93-Neo4j_u7B80_u4ECB"><a href="#u56FE_u6570_u636E_u5E93-Neo4j_u7B80_u4ECB" class="headerlink" title="图数据库-Neo4j简介"></a>图数据库-Neo4j简介</h1><hr>
@@ -100,7 +100,7 @@
 <li>轻易拓展到上亿级别的节点和关系：可进行分布式集群部署</li>
 </ul>
 </blockquote>
-<h1 id="2_u3001_u56FE_u6570_u636E_u5E93_u57FA_u7840_u7B80_u4ECB"><a href="#2_u3001_u56FE_u6570_u636E_u5E93_u57FA_u7840_u7B80_u4ECB" class="headerlink" title="2、图数据库基础简介"></a>2、图数据库基础简介</h1><h3 id="2-1__u4EC0_u4E48_u662F_u56FE_u6570_u636E_u5E93"><a href="#2-1__u4EC0_u4E48_u662F_u56FE_u6570_u636E_u5E93" class="headerlink" title="2.1 什么是图数据库"></a>2.1 什么是图数据库</h3><pre><code>图数据库用图来存储数据，是最接近高性能的一种用于存储数据的数据结构方式之一。
+<h1 id="2_u3001_u4EC0_u4E48_u662F_u56FE_u6570_u636E_u5E93"><a href="#2_u3001_u4EC0_u4E48_u662F_u56FE_u6570_u636E_u5E93" class="headerlink" title="2、什么是图数据库"></a>2、什么是图数据库</h1><h3 id="2-1__u4EC0_u4E48_u662F_u56FE_u6570_u636E_u5E93"><a href="#2-1__u4EC0_u4E48_u662F_u56FE_u6570_u636E_u5E93" class="headerlink" title="2.1 什么是图数据库"></a>2.1 什么是图数据库</h3><pre><code>图数据库用图来存储数据，是最接近高性能的一种用于存储数据的数据结构方式之一。
 </code></pre><ul>
 <li>节点（Node）：<ul>
 <li>labels、properties</li>
@@ -108,10 +108,10 @@
 </li>
 <li>关系（Relationship）：<ul>
 <li>types、properties、direction</li>
-<li>can have relationhips to itself</li>
+<li>can have relationhips to itself<br><img src="/./attach_img/初学Neo4j/relation to itself.png" alt="relation to itself"></li>
 </ul>
 </li>
-<li>属性（Property）：<ul>
+<li>attach_img<ul>
 <li>key-value；key（null is valid），values（not null）</li>
 <li>numeric、string、boolean</li>
 </ul>
@@ -120,7 +120,7 @@
 <li>assign roles and types to nodes</li>
 <li>when defining constraints and adding indexes for properties</li>
 <li>can be added and removed during runtime, can be uesd to mark temporary states for your nodes</li>
-<li>labes have an id space of a int - roughly 2 billion</li>
+<li>labes have an id space of a int - roughly 2 billion<br><img src="/./attach_img/初学Neo4j/Nodes and relationships.png" alt="Nodes and relationships"></li>
 </ul>
 </li>
 <li>遍历(Traversal)：<ul>
@@ -129,7 +129,30 @@
 <li>depth-first( default ) 、 width-first</li>
 </ul>
 </li>
-<li>路径(Path)<br><img src="C:\Users\xi\Desktop\temp\1.png" alt="cmd-markdown-logo">  图片<br><img src="C:/Users/xi/Desktop/temp/1.png" alt="cmd-markdown-logo">  图片</li>
+<li>路径(Path)</li>
+<li>模式(Schema)<ul>
+<li>schema commands can only be applied on the master machine in a Neo4j cluster</li>
+</ul>
+</li>
+<li>索引(Index)<ul>
+<li>speed up queries</li>
+<li>look at logs for clues to drop or recreate the index</li>
+<li>you can use indexes through the different APIs,except Cypher</li>
+<li>Neo4j use Constraints through different APIs to keep your data clean</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-2__u5BF9_u6BD4_u5176_u4ED6_u6570_u636E_u5E93_u6A21_u578B"><a href="#2-2__u5BF9_u6BD4_u5176_u4ED6_u6570_u636E_u5E93_u6A21_u578B" class="headerlink" title="2.2 对比其他数据库模型"></a>2.2 对比其他数据库模型</h3><ul>
+<li>a graph database transforms a RDBMS<br><img src="/./attach_img/初学Neo4j/RDBMS.png" alt="RDBMS"><br><img src="/./attach_img/初学Neo4j/Graph Database as RDBMS.png" alt="Graph Database as RDBMS"></li>
+<li>a graph database elaborates a Key-Value store<br><img src="/./attach_img/初学Neo4j/Key-Value Store.png" alt="Key-Value Store"><br><img src="/./attach_img/初学Neo4j/Graph Database as Key-Value Store.png" alt="Graph Database as Key-Value Store"></li>
+<li>a graph database relates Column-Family<ul>
+<li>Column Family(BigTable-style) databases are an evolution of key-value, using “families” to allow grouping of rows. Stored in a graph, the families could become hierarchical, and the relationships among data becomes explicit.</li>
+</ul>
+</li>
+<li>a graph database navigate a document store<ul>
+<li>The container hierarchy of a document database accommodates nice, schema-free data that can easily be represented as a tree. Which is of course a graph. Refer to other documents (or document elements) within that tree and you have a more expressive representation of the same data. When in Neo4j, those relationships are easily navigable.<br><img src="/./attach_img/初学Neo4j/Document Store.png" alt="Document Store"><br><img src="/./attach_img/初学Neo4j/Graph Database as Document Store.png" alt="Graph Database as Document Store"></li>
+</ul>
+</li>
 </ul>
   
 	</div>
@@ -170,7 +193,7 @@
 
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
-  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#u56FE_u6570_u636E_u5E93-Neo4j_u7B80_u4ECB"><span class="toc-number">1.</span> <span class="toc-text">图数据库-Neo4j简介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1_u3001Neo4j_u7684_u4EAE_u70B9"><span class="toc-number">2.</span> <span class="toc-text">1、Neo4j的亮点</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2_u3001_u56FE_u6570_u636E_u5E93_u57FA_u7840_u7B80_u4ECB"><span class="toc-number">3.</span> <span class="toc-text">2、图数据库基础简介</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1__u4EC0_u4E48_u662F_u56FE_u6570_u636E_u5E93"><span class="toc-number">3.0.1.</span> <span class="toc-text">2.1 什么是图数据库</span></a></li></ol></li></ol></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#u56FE_u6570_u636E_u5E93-Neo4j_u7B80_u4ECB"><span class="toc-number">1.</span> <span class="toc-text">图数据库-Neo4j简介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1_u3001Neo4j_u7684_u4EAE_u70B9"><span class="toc-number">2.</span> <span class="toc-text">1、Neo4j的亮点</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2_u3001_u4EC0_u4E48_u662F_u56FE_u6570_u636E_u5E93"><span class="toc-number">3.</span> <span class="toc-text">2、什么是图数据库</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1__u4EC0_u4E48_u662F_u56FE_u6570_u636E_u5E93"><span class="toc-number">3.0.1.</span> <span class="toc-text">2.1 什么是图数据库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2__u5BF9_u6BD4_u5176_u4ED6_u6570_u636E_u5E93_u6A21_u578B"><span class="toc-number">3.0.2.</span> <span class="toc-text">2.2 对比其他数据库模型</span></a></li></ol></li></ol></li></ol>
   </div>
 
 <div id="asidepart">
