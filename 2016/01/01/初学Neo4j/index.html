@@ -9,7 +9,12 @@
     
     <meta name="author" content="longxi">
     
-    <meta name="description" content="我就试试看">
+    <meta name="description" content="图数据库-Neo4j简介
+在线演示地址：http://console.neo4j.org/
+1、Neo4j的亮点作为一款强健的，可伸缩的高性能数据库，Neo4j 最适合完整的企业部署或者用于一个轻量级项目中完整服务器的一个子集存在。 它包括如下几个显著特点: 
+
+
+完整的ACID支持：一个事务里面多">
     
     
     
@@ -18,8 +23,8 @@
     <link rel="icon" href="/img/logo.ico">
     
     
-    <link rel="apple-touch-icon" href="/img/pacman.jpg">
-    <link rel="apple-touch-icon-precomposed" href="/img/pacman.jpg">
+    <link rel="apple-touch-icon" href="/img/author.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/author.jpg">
     
     <link rel="stylesheet" href="/css/style.css" type="text/css">
 </head>
@@ -29,7 +34,7 @@
       <div>
 		
 			<div id="imglogo">
-				<a href="/"><img src="/img/logo.jpg" alt="longxi7997" title="longxi7997"/></a>
+				<a href="/"><img src="/img/author.jpg" alt="longxi7997" title="longxi7997"/></a>
 			</div>
 			
 			<div id="textlogo">
@@ -65,7 +70,7 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/01/01/My-New-Post/" title="My New Post" itemprop="url">My New Post</a>
+      <a href="/2016/01/01/初学Neo4j/" title="My New Post" itemprop="url">My New Post</a>
   </h1>
   <p class="article-author">By
     
@@ -73,7 +78,7 @@
     </p>
   <p class="article-time">
     <time datetime="2016-01-01T07:08:46.000Z" itemprop="datePublished">2016-01-01</time>
-    更新日期:<time datetime="2016-01-01T15:40:08.682Z" itemprop="dateModified">2016-01-01</time>
+    更新日期:<time datetime="2016-01-15T04:30:29.763Z" itemprop="dateModified">2016-01-15</time>
     
   </p>
 </header>
@@ -82,10 +87,50 @@
 		
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
-		
+		<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#u56FE_u6570_u636E_u5E93-Neo4j_u7B80_u4ECB"><span class="toc-number">1.</span> <span class="toc-text">图数据库-Neo4j简介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1_u3001Neo4j_u7684_u4EAE_u70B9"><span class="toc-number">2.</span> <span class="toc-text">1、Neo4j的亮点</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2_u3001_u4EC0_u4E48_u662F_u56FE_u6570_u636E_u5E93"><span class="toc-number">3.</span> <span class="toc-text">2、什么是图数据库</span></a></li></ol>
 		</div>
 		
-		<p>我就试试看</p>
+		<h1 id="u56FE_u6570_u636E_u5E93-Neo4j_u7B80_u4ECB"><a href="#u56FE_u6570_u636E_u5E93-Neo4j_u7B80_u4ECB" class="headerlink" title="图数据库-Neo4j简介"></a>图数据库-Neo4j简介</h1><hr>
+<p>在线演示地址：<a href="http://console.neo4j.org/" target="_blank" rel="external">http://console.neo4j.org/</a></p>
+<h1 id="1_u3001Neo4j_u7684_u4EAE_u70B9"><a href="#1_u3001Neo4j_u7684_u4EAE_u70B9" class="headerlink" title="1、Neo4j的亮点"></a>1、Neo4j的亮点</h1><p>作为一款强健的，可伸缩的高性能数据库，Neo4j 最适合完整的企业部署或者用于一个轻量级项目中完整服务器的一个子集存在。 它包括如下几个显著特点: </p>
+<blockquote>
+<ul>
+<li>完整的ACID支持：一个事务里面多个操作同时发生，保证数据一致性</li>
+<li>高可用性：可靠，性能只受硬件影响，不受业务本身约束。</li>
+<li>轻易拓展到上亿级别的节点和关系：可进行分布式集群部署</li>
+</ul>
+</blockquote>
+<h1 id="2_u3001_u4EC0_u4E48_u662F_u56FE_u6570_u636E_u5E93"><a href="#2_u3001_u4EC0_u4E48_u662F_u56FE_u6570_u636E_u5E93" class="headerlink" title="2、什么是图数据库"></a>2、什么是图数据库</h1><p>###2.1 什么是图数据库<br>    图数据库用图来存储数据，是最接近高性能的一种用于存储数据的数据结构方式之一。</p>
+<ul>
+<li>节点（Node）：<ul>
+<li>labels、properties</li>
+</ul>
+</li>
+<li>关系（Relationship）：<ul>
+<li>types、properties、direction</li>
+<li>can have relationhips to itself</li>
+</ul>
+</li>
+<li>属性（Property）：<ul>
+<li>key-value；key（null is valid），values（not null）</li>
+<li>numeric、string、boolean</li>
+</ul>
+</li>
+<li>标签（Label）：<ul>
+<li>assign roles and types to nodes</li>
+<li>when defining constraints and adding indexes for properties</li>
+<li>can be added and removed during runtime, can be uesd to mark temporary states for your nodes</li>
+<li>labes have an id space of a int - roughly 2 billion</li>
+</ul>
+</li>
+<li>遍历(Traversal)：<ul>
+<li>in most cases only a subgraph is visited</li>
+<li>Cypher provide a way to query the graph</li>
+<li>depth-first( default ) 、 width-first</li>
+</ul>
+</li>
+<li>路径(Path)<br><img src="C:\Users\xi\Desktop\temp\1.png" alt="cmd-markdown-logo">  图片<br><img src="C:/Users/xi/Desktop/temp/1.png" alt="cmd-markdown-logo">  图片</li>
+</ul>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -95,7 +140,7 @@
 
 <div class="article-share" id="share">
 
-  <div data-url="http://yoursite.com/2016/01/01/My-New-Post/" data-title="My New Post | longxi7997" data-tsina="null" class="share clearfix">
+  <div data-url="http://yoursite.com/2016/01/01/初学Neo4j/" data-title="My New Post | longxi7997" data-tsina="null" class="share clearfix">
   </div>
 
 </div>
@@ -117,7 +162,7 @@
 
 	
 <section class="comment">
-	<div class="ds-thread" data-thread-key="2016/01/01/My-New-Post/" data-title="My New Post" data-url="http://yoursite.com/2016/01/01/My-New-Post/" ></div>
+	<div class="ds-thread" data-thread-key="2016/01/01/初学Neo4j/" data-title="My New Post" data-url="http://yoursite.com/2016/01/01/初学Neo4j/" ></div>
 </section>
 
 </div>  
@@ -125,7 +170,7 @@
 
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
-  
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#u56FE_u6570_u636E_u5E93-Neo4j_u7B80_u4ECB"><span class="toc-number">1.</span> <span class="toc-text">图数据库-Neo4j简介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1_u3001Neo4j_u7684_u4EAE_u70B9"><span class="toc-number">2.</span> <span class="toc-text">1、Neo4j的亮点</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2_u3001_u4EC0_u4E48_u662F_u56FE_u6570_u636E_u5E93"><span class="toc-number">3.</span> <span class="toc-text">2、什么是图数据库</span></a></li></ol>
   </div>
 
 <div id="asidepart">
