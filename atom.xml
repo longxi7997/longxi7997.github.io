@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://longxi7997.github.io/</id>
     <title>Gridea</title>
-    <updated>2021-07-13T07:33:29.206Z</updated>
+    <updated>2021-07-13T07:47:03.646Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://longxi7997.github.io/"/>
     <link rel="self" href="https://longxi7997.github.io/atom.xml"/>
@@ -60,9 +60,12 @@
 </ul>
 </blockquote>
 <h1 id="2-什么是图数据库">2、什么是图数据库</h1>
-<h2 id="21-什么是图数据库">2.1 什么是图数据库</h2>
-<pre><code>图数据库用图来存储数据，是最接近高性能的一种用于存储数据的数据结构方式之一。
+<pre><code>## 2.1 什么是图数据库
 </code></pre>
+<p>&quot;&quot;&quot;<br>
+图数据库用图来存储数据，是最接近高性能的一种用于存储数据的数据结构方式之一。<br>
+&quot;&quot;&quot;</p>
+<figure data-type="image" tabindex="1"><img src="https://longxi7997.github.io//post-images/1626162412189.png" alt="" loading="lazy"></figure>
 <ul>
 <li>节点（Node）：
 <ul>
@@ -71,12 +74,21 @@
 </li>
 <li>关系（Relationship）：
 <ul>
-<li>types、properties、direction</li>
-<li>can have relationhips to itself</li>
-<li>![relation to itself](C:\Users\LongXi\Desktop\Github\longxi7997.github.io\attach_img\初学Neo4j\relation to itself.png)</li>
-<li>[<img src="https://longxi7997.github.io/attach_img/%E5%88%9D%E5%AD%A6Neo4j/relation%20to%20itself.png" alt="relation to itself" loading="lazy">](https://longxi7997.github.io/attach_img/初学Neo4j/relation to itself.png)relation to itself</li>
-<li>key-value；key（null is valid），values（not null）</li>
-<li>numeric、string、boolean</li>
+<li>
+<p>types、properties、direction</p>
+</li>
+<li>
+<p>can have relationhips to itself</p>
+</li>
+<li>
+<p>relation to itself</p>
+</li>
+<li>
+<p>key-value；key（null is valid），values（not null）</p>
+</li>
+<li>
+<p>numeric、string、boolean</p>
+</li>
 </ul>
 </li>
 </ul>
