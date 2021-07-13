@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://longxi7997.github.io/</id>
     <title>Gridea</title>
-    <updated>2021-07-13T07:47:18.005Z</updated>
+    <updated>2021-07-13T07:48:08.773Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://longxi7997.github.io/"/>
     <link rel="self" href="https://longxi7997.github.io/atom.xml"/>
@@ -50,48 +50,6 @@
         <updated>2016-01-15T04:30:26.000Z</updated>
         <content type="html"><![CDATA[<h1 id="图数据库-neo4j简介">图数据库-Neo4j简介</h1>
 <p>在线演示地址：http://console.neo4j.org/</p>
-<h1 id="1-neo4j的亮点">1、Neo4j的亮点</h1>
-<p>作为一款强健的，可伸缩的高性能数据库，Neo4j 最适合完整的企业部署或者用于一个轻量级项目中完整服务器的一个子集存在。 它包括如下几个显著特点:</p>
-<blockquote>
-<ul>
-<li>完整的ACID支持：一个事务里面多个操作同时发生，保证数据一致性</li>
-<li>高可用性：可靠，性能只受硬件影响，不受业务本身约束。</li>
-<li>轻易拓展到上亿级别的节点和关系：可进行分布式集群部署</li>
-</ul>
-</blockquote>
-<h1 id="2-什么是图数据库">2、什么是图数据库</h1>
-<pre><code>## 2.1 什么是图数据库
-</code></pre>
-<p>&quot;&quot;&quot;<br>
-图数据库用图来存储数据，是最接近高性能的一种用于存储数据的数据结构方式之一。<br>
-&quot;&quot;&quot;</p>
-<figure data-type="image" tabindex="1"><img src="https://longxi7997.github.io//post-images/1626162412189.png" alt="" loading="lazy"></figure>
-<ul>
-<li>节点（Node）：
-<ul>
-<li>labels、properties</li>
-</ul>
-</li>
-<li>关系（Relationship）：
-<ul>
-<li>
-<p>types、properties、direction</p>
-</li>
-<li>
-<p>can have relationhips to itself</p>
-</li>
-<li>
-<p>relation to itself</p>
-</li>
-<li>
-<p>key-value；key（null is valid），values（not null）</p>
-</li>
-<li>
-<p>numeric、string、boolean</p>
-</li>
-</ul>
-</li>
-</ul>
 ]]></content>
     </entry>
 </feed>
