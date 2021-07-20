@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://longxi7997.github.io/</id>
     <title>Gridea</title>
-    <updated>2021-07-19T02:37:14.729Z</updated>
+    <updated>2021-07-20T02:36:14.488Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://longxi7997.github.io/"/>
     <link rel="self" href="https://longxi7997.github.io/atom.xml"/>
@@ -49,8 +49,155 @@
         </link>
         <updated>2016-01-15T04:30:26.000Z</updated>
         <content type="html"><![CDATA[<h1 id="图数据库-neo4j简介">图数据库-Neo4j简介</h1>
-<p>在线演示地址：http://console.neo4j.org/</p>
-<p>![](C:\Users\LongXi\Desktop\Github\Gridea\post-images\neo4j\relation to itself.png)</p>
+<p><a href="http://console.neo4j.org/">在线演示地址</a></p>
+<h1 id="1-neo4j的亮点">1、Neo4j的亮点</h1>
+<p>作为一款强健的，可伸缩的高性能数据库，Neo4j<br>
+最适合完整的企业部署或者用于一个轻量级项目中完整服务器的一个子集存在。<br>
+它包括如下几个显著特点:</p>
+<blockquote>
+<p>完整的ACID支持：一个事务里面多个操作同时发生，保证数据一致性</p>
+</blockquote>
+<blockquote>
+<p>高可用性：可靠，性能只受硬件影响，不受业务本身约束。</p>
+</blockquote>
+<blockquote>
+<p>轻易拓展到上亿级别的节点和关系：可进行分布式集群部署</p>
+</blockquote>
+<h1 id="2-什么是图数据库">2、什么是图数据库</h1>
+<h2 id="21-什么是图数据库">2.1 什么是图数据库</h2>
+<pre><code>图数据库用图来存储数据，是最接近高性能的一种用于存储数据的数据结构方式之一。
+</code></pre>
+<ul>
+<li>
+<p>节点（Node）：</p>
+<ul>
+<li>labels、properties</li>
+</ul>
+</li>
+<li>
+<p>关系（Relationship）：</p>
+<ul>
+<li>
+<p>types、properties、direction</p>
+</li>
+<li>
+<p>can have relationhips to itself <img src="https://longxi7997.github.io//post-images/1626663105987.png" alt="relation toitself" loading="lazy"></p>
+</li>
+</ul>
+</li>
+</ul>
+<center>relation to itself</center>
+<ul>
+<li>
+<p>key-value；key（null is valid），values（not null）</p>
+<ul>
+<li>numeric、string、boolean</li>
+</ul>
+</li>
+<li>
+<p>标签（Label）：</p>
+<ul>
+<li>
+<p>assign roles and types to nodes</p>
+</li>
+<li>
+<p>when defining constraints and adding indexes for properties</p>
+</li>
+<li>
+<p>can be added and removed during runtime, can be uesd to mark temporary<br>
+states for your nodes</p>
+</li>
+<li>
+<p>labes have an id space of a int - roughly 2 billion</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://longxi7997.github.io//post-images/1626663946748.png" alt="Nodes and relationships" loading="lazy"><br>
+<center>Nodes and relationships</center></p>
+<ul>
+<li>
+<p>遍历(Traversal)：</p>
+<ul>
+<li>
+<p>in most cases only a subgraph is visited</p>
+</li>
+<li>
+<p>Cypher provide a way to query the graph</p>
+</li>
+<li>
+<p>depth-first( default ) 、 width-first</p>
+</li>
+</ul>
+</li>
+<li>
+<p>路径(Path)</p>
+</li>
+<li>
+<p>模式(Schema)</p>
+<ul>
+<li>schema commands can only be applied on the master machine in a Neo4j<br>
+cluster</li>
+</ul>
+</li>
+<li>
+<p>索引(Index)</p>
+<ul>
+<li>
+<p>speed up queries</p>
+</li>
+<li>
+<p>look at logs for clues to drop or recreate the index</p>
+</li>
+<li>
+<p>you can use indexes through the different APIs,except Cypher</p>
+</li>
+<li>
+<p>Neo4j use Constraints through different APIs to keep your data clean</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="22-对比其他数据库模型">2.2 对比其他数据库模型</h2>
+<ul>
+<li>a graph database transforms a RDBMS<br>
+<img src="https://longxi7997.github.io//post-images/1626663983367.png" alt="RDBMS" loading="lazy"></li>
+</ul>
+<center>RDBMS</center>
+<figure data-type="image" tabindex="1"><img src="https://longxi7997.github.io//post-images/1626664178072.png" alt="Graph Database as RDBMS" loading="lazy"></figure>
+<center>Graph Database as RDBMS</center>
+<ul>
+<li>a graph database elaborates a Key-Value store<br>
+<img src="https://longxi7997.github.io//post-images/1626664013141.png" alt="Key-Value Store" loading="lazy"></li>
+</ul>
+<center>Key-Value Store</center>
+<figure data-type="image" tabindex="2"><img src="https://longxi7997.github.io//post-images/1626664235218.png" alt="Graph Database as Key-Value Store" loading="lazy"></figure>
+<center>Graph Database as Key-Value Store</center>
+<ul>
+<li>
+<p>a graph database relates Column-Family</p>
+<ul>
+<li>Column Family(BigTable-style) databases are an evolution of key-value,<br>
+using “families” to allow grouping of rows. Stored in a graph, the<br>
+families could become hierarchical, and the relationships among data<br>
+becomes explicit.</li>
+</ul>
+</li>
+<li>
+<p>a graph database navigate a document store</p>
+<ul>
+<li>The container hierarchy of a document database accommodates nice,<br>
+schema-free data that can easily be represented as a tree. Which is of<br>
+course a graph. Refer to other documents (or document elements) within<br>
+that tree and you have a more expressive representation of the same<br>
+data. When in Neo4j, those relationships are easily navigable.<br>
+<img src="https://longxi7997.github.io//post-images/1626664041343.png" alt="Document Store" loading="lazy"></li>
+</ul>
+</li>
+</ul>
+<center>Document Store</center>
+<figure data-type="image" tabindex="3"><img src="https://longxi7997.github.io//post-images/1626664056458.png" alt="Graph Database as Document Store" loading="lazy"></figure>
+<center>Graph Database as Document Store</center>
 ]]></content>
     </entry>
 </feed>
