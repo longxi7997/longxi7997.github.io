@@ -1,15 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://longxi7997.github.io/</id>
-    <title>Gridea</title>
-    <updated>2021-07-20T02:36:14.488Z</updated>
+    <title>longxi7997</title>
+    <updated>2021-07-26T04:49:42.224Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://longxi7997.github.io/"/>
     <link rel="self" href="https://longxi7997.github.io/atom.xml"/>
     <subtitle>温故而知新</subtitle>
     <logo>https://longxi7997.github.io/images/avatar.png</logo>
     <icon>https://longxi7997.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2021, Gridea</rights>
+    <rights>All rights reserved 2021, longxi7997</rights>
+    <entry>
+        <title type="html"><![CDATA[Python性能优化]]></title>
+        <id>https://longxi7997.github.io/post/python性能优化/</id>
+        <link href="https://longxi7997.github.io/post/python性能优化/">
+        </link>
+        <updated>2021-07-20T08:21:08.000Z</updated>
+        <content type="html"><![CDATA[<p><a href="https://www.cnblogs.com/venvive/p/11601190.html">https://www.cnblogs.com/venvive/p/11601190.html</a></p>
+<h1 id="性能评价分析">性能评价分析</h1>
+<ol>
+<li>
+<h3 id="timedatetime计时">time|datetime计时</h3>
+<p>low</p>
+</li>
+<li>
+<h3 id="timeit">timeit</h3>
+<p>总结：直接看模块化和default_timer()</p>
+<ol>
+<li>
+<h4 id="单行测试">单行测试</h4>
+<pre><code class="language-python">import timeit
+print(timeit.timeit('a=1'))
+print(timeit.repeat('a=1')) #默认五次，输出数组
+</code></pre>
+<ol start="2">
+<li>
+<h4 id="多行测试">多行测试</h4>
+<pre><code class="language-python">import timeit
+
+print(timeit.timeit(stmt='a=1;b=2;c=a+b;'))
+print(timeit.timeit(stmt=&quot;&quot;&quot;
+a=1;
+b=2;
+c=a+b;
+&quot;&quot;&quot;))
+</code></pre>
+</li>
+</ol>
+</li>
+<li>
+<h4 id="模块化">模块化</h4>
+</li>
+<li>
+<h4 id="default_timer">default_timer()</h4>
+</li>
+</ol>
+</li>
+<li>
+<h3 id="time-装饰器">time() 装饰器</h3>
+</li>
+<li>
+<h3 id="profile">profile</h3>
+</li>
+<li>
+<h3 id="cprofile">cProfile</h3>
+</li>
+<li>
+<h3 id="line_profiler">line_profiler</h3>
+</li>
+<li>
+<h3 id="memory_profiler">memory_profiler</h3>
+</li>
+<li>
+<h3 id="pycharm">PyCharm</h3>
+</li>
+<li>
+<h3 id="objgraph">objgraph</h3>
+</li>
+</ol>
+<h1 id="性能优化的几种情况">性能优化的几种情况</h1>
+<h2 id="计算密集型">计算密集型</h2>
+<p>GIL</p>
+<p>JIT</p>
+<h2 id="io密集型">IO密集型</h2>
+<p>hiredis</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
         <id>https://longxi7997.github.io/post/hello-gridea/</id>
@@ -44,8 +120,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[图数据库Neo4j]]></title>
-        <id>https://longxi7997.github.io/post/neo4j/</id>
-        <link href="https://longxi7997.github.io/post/neo4j/">
+        <id>https://longxi7997.github.io/post/neo4j简介/</id>
+        <link href="https://longxi7997.github.io/post/neo4j简介/">
         </link>
         <updated>2016-01-15T04:30:26.000Z</updated>
         <content type="html"><![CDATA[<h1 id="图数据库-neo4j简介">图数据库-Neo4j简介</h1>
@@ -81,17 +157,24 @@
 <p>types、properties、direction</p>
 </li>
 <li>
-<p>can have relationhips to itself <img src="https://longxi7997.github.io//post-images/1626663105987.png" alt="relation toitself" loading="lazy"></p>
+<p>can have relationhips to itself</p>
 </li>
-</ul>
+<li>
+<figure data-type="image" tabindex="1"><img src="https://longxi7997.github.io//post-images/1626663105987.png" alt="relation toitself" loading="lazy"></figure>
 </li>
-</ul>
-<center>relation to itself</center>
-<ul>
+<li>
+<div style="text-align: center;">relation to
+itself</div>
+</li>
+<li>
+<p>types、properties、direction</p>
+</li>
 <li>
 <p>key-value；key（null is valid），values（not null）</p>
-<ul>
-<li>numeric、string、boolean</li>
+</li>
+<li>
+<p>numeric、string、boolean</p>
+</li>
 </ul>
 </li>
 <li>
@@ -110,12 +193,14 @@ states for your nodes</p>
 <li>
 <p>labes have an id space of a int - roughly 2 billion</p>
 </li>
-</ul>
+<li>
+<figure data-type="image" tabindex="2"><img src="https://longxi7997.github.io//post-images/1626663946748.png#pic_center" alt="Nodes andrelationships" loading="lazy"></figure>
+</li>
+<li>
+<div style="text-align: center;">Nodes and relationships</div>
 </li>
 </ul>
-<p><img src="https://longxi7997.github.io//post-images/1626663946748.png" alt="Nodes and relationships" loading="lazy"><br>
-<center>Nodes and relationships</center></p>
-<ul>
+</li>
 <li>
 <p>遍历(Traversal)：</p>
 <ul>
@@ -160,19 +245,26 @@ cluster</li>
 </ul>
 <h2 id="22-对比其他数据库模型">2.2 对比其他数据库模型</h2>
 <ul>
-<li>a graph database transforms a RDBMS<br>
-<img src="https://longxi7997.github.io//post-images/1626663983367.png" alt="RDBMS" loading="lazy"></li>
-</ul>
-<center>RDBMS</center>
-<figure data-type="image" tabindex="1"><img src="https://longxi7997.github.io//post-images/1626664178072.png" alt="Graph Database as RDBMS" loading="lazy"></figure>
-<center>Graph Database as RDBMS</center>
+<li>
+<p>a graph database transforms a RDBMS</p>
 <ul>
-<li>a graph database elaborates a Key-Value store<br>
-<img src="https://longxi7997.github.io//post-images/1626664013141.png" alt="Key-Value Store" loading="lazy"></li>
+<li><img src="https://longxi7997.github.io//post-images/1626663983367.png" alt="RDBMS" loading="lazy"></li>
 </ul>
-<center>Key-Value Store</center>
-<figure data-type="image" tabindex="2"><img src="https://longxi7997.github.io//post-images/1626664235218.png" alt="Graph Database as Key-Value Store" loading="lazy"></figure>
-<center>Graph Database as Key-Value Store</center>
+</li>
+</ul>
+<div style="text-align: center;">RDBMS</div>
+<figure data-type="image" tabindex="4"><img src="https://longxi7997.github.io//post-images/1626664178072.png" alt="Graph Database asRDBMS" loading="lazy"></figure>
+<div style="text-align: center;">Graph Database as
+RDBMS</div>
+<ul>
+<li>a graph database elaborates a Key-Value store</li>
+</ul>
+<figure data-type="image" tabindex="5"><img src="https://longxi7997.github.io//post-images/1626664013141.png" alt="Key-ValueStore" loading="lazy"></figure>
+<div style="text-align: center;">Key-Value
+    Store</div>
+<figure data-type="image" tabindex="6"><img src="https://longxi7997.github.io//post-images/1626664235218.png" alt="Graph Database as Key-ValueStore" loading="lazy"></figure>
+<div style="text-align: center;">Graph Database as Key-Value
+Store</div>
 <ul>
 <li>
 <p>a graph database relates Column-Family</p>
@@ -190,14 +282,16 @@ becomes explicit.</li>
 schema-free data that can easily be represented as a tree. Which is of<br>
 course a graph. Refer to other documents (or document elements) within<br>
 that tree and you have a more expressive representation of the same<br>
-data. When in Neo4j, those relationships are easily navigable.<br>
-<img src="https://longxi7997.github.io//post-images/1626664041343.png" alt="Document Store" loading="lazy"></li>
+data. When in Neo4j, those relationships are easily navigable.</li>
+<li><img src="https://longxi7997.github.io//post-images/1626664041343.png" alt="DocumentStore" loading="lazy"></li>
 </ul>
 </li>
 </ul>
-<center>Document Store</center>
-<figure data-type="image" tabindex="3"><img src="https://longxi7997.github.io//post-images/1626664056458.png" alt="Graph Database as Document Store" loading="lazy"></figure>
-<center>Graph Database as Document Store</center>
-]]></content>
+<div style="text-align: center;">Document
+        Store
+Store</div>
+<figure data-type="image" tabindex="8"><img src="https://longxi7997.github.io//post-images/1626664056458.png" alt="Graph Database as DocumentStore" loading="lazy"></figure>
+<div style="text-align: center;">Graph Database as Document
+Store</div>]]></content>
     </entry>
 </feed>
